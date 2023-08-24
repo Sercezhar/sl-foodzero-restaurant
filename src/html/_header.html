@@ -1,24 +1,25 @@
 <header class="header">
   <div class="header__container">
-    <a class="header__logo" href="#">[Site Logo]</a>
+    <div class="header__block">
+      <a href="./index.html" class="header__logo">
+        <svg width="307" height="115">
+          <use href="./images/icons.svg#icon-logo"></use>
+        </svg>
+      </a>
 
-    <nav>
-      <ul class="main-nav">
-        <li>
-          <a href="#" class="main-nav__item-link main-nav__item-link--current"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a href="#" class="main-nav__item-link">Portfolio</a>
-        </li>
-        <li>
-          <a href="#" class="main-nav__item-link">About</a>
-        </li>
-        <li>
-          <a href="#" class="main-nav__item-link">Contacts</a>
-        </li>
-      </ul>
-    </nav>
+      <button class="header__nav-open" type="button">
+        <svg width="94" height="71">
+          <use href="./images/icons.svg#icon-nav-open"></use>
+        </svg>
+      </button>
+    </div>
+
+    @@include('./_navigation.html')
+
+    <div class="header__block">
+      <a class="header__number" href="tel:+86852346000">+86 852 346 000</a>
+
+      <button class="header__button" type="button">Reservations</button>
+    </div>
   </div>
 </header>

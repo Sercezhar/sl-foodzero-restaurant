@@ -1,22 +1,22 @@
-"use strict";
+'use strict';
 
-const { src, dest } = require("gulp");
-const gulp = require("gulp");
-const autoprefixer = require("gulp-autoprefixer");
-const changed = require("gulp-changed");
-const cssbeautify = require("gulp-cssbeautify");
-const cssnano = require("gulp-cssnano");
-const fileinclude = require("gulp-file-include");
-const htmlmin = require("gulp-htmlmin");
-const imagemin = require("gulp-imagemin");
-const notify = require("gulp-notify");
-const plumber = require("gulp-plumber");
-const removeComments = require("gulp-strip-css-comments");
-const rename = require("gulp-rename");
-const sass = require("gulp-sass")(require("sass"));
-const del = require("del");
-const webpack = require("webpack-stream");
-const browserSync = require("browser-sync").create();
+const { src, dest } = require('gulp');
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+const changed = require('gulp-changed');
+const cssbeautify = require('gulp-cssbeautify');
+const cssnano = require('gulp-cssnano');
+const fileinclude = require('gulp-file-include');
+const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
+const notify = require('gulp-notify');
+const plumber = require('gulp-plumber');
+const removeComments = require('gulp-strip-css-comments');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass')(require('sass'));
+const del = require('del');
+const webpack = require('webpack-stream');
+const browserSync = require('browser-sync').create();
 
 /* ========== [PATHS] ========== */
 const buildFolder = `./dist`;
@@ -54,7 +54,7 @@ function server() {
     server: {
       baseDir: buildFolder,
     },
-    logLevel: "info",
+    logLevel: 'info',
     cors: true,
     notify: false,
     port: 3000,
@@ -82,14 +82,14 @@ function scss() {
       plumber({
         errorHandler: function (err) {
           notify.onError({
-            title: "SCSS Error",
-            message: "Error: <%= error.message %>",
+            title: 'SCSS Error',
+            message: 'Error: <%= error.message %>',
           })(err);
-          this.emit("end");
+          this.emit('end');
         },
       })
     )
-    .pipe(sass({ outputStyle: "compressed" }))
+    .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer())
     .pipe(cssbeautify())
     .pipe(dest(path.build.css))
@@ -104,8 +104,8 @@ function scss() {
     .pipe(removeComments())
     .pipe(
       rename({
-        suffix: ".min",
-        extname: ".css",
+        suffix: '.min',
+        extname: '.css',
       })
     )
     .pipe(dest(path.build.css))
@@ -119,14 +119,14 @@ function js() {
       plumber({
         errorHandler: function (err) {
           notify.onError({
-            title: "JavaScript Error",
-            message: "Error: <%= error.message %>",
+            title: 'JavaScript Error',
+            message: 'Error: <%= error.message %>',
           })(err);
-          this.emit("end");
+          this.emit('end');
         },
       })
     )
-    .pipe(webpack(require("./webpack.config.js")))
+    .pipe(webpack(require('./webpack.config.js')))
     .pipe(dest(path.build.js))
     .pipe(browserSync.stream());
 }
@@ -166,10 +166,17 @@ function watcher() {
   gulp.watch([path.watch.css], scss);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.images], images);
-  gulp.watch([path.watch.fonts], fonts);
+  // gulp.watch([path.watch.fonts], fonts);
 }
 
-const tasks = gulp.parallel(favicon, html, scss, js, images, fonts);
+const tasks = gulp.parallel(
+  favicon,
+  html,
+  scss,
+  js,
+  images
+  // fonts
+);
 
 const build = gulp.series(clean, tasks);
 const watch = gulp.parallel(build, watcher, server);
@@ -180,7 +187,7 @@ exports.html = html;
 exports.scss = scss;
 exports.js = js;
 exports.images = images;
-exports.fonts = fonts;
+// exports.fonts = fonts;
 exports.clean = clean;
 exports.build = build;
 exports.watch = watch;

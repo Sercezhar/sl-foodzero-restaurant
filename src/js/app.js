@@ -1,3 +1,3 @@
-import { burgerMenu } from './modules/burgerMenu';
+import { navMenu } from './modules/navMenu';
 
-burgerMenu();
+navMenu();
