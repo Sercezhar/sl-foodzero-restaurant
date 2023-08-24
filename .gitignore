@@ -1,0 +1,8 @@
+.vscode
+.env
+.DS_Store
+.prettierignore
+
+dist
+node_modules
+package-lock.json
