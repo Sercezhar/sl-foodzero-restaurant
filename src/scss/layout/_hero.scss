@@ -1,0 +1,94 @@
+.hero {
+  padding-top: 310px;
+  padding-bottom: 222px;
+  color: #fff;
+  background-color: $colorPrimary;
+
+  &__text {
+    margin-bottom: 50px;
+    width: 565px;
+    @include font-style(24px, 400, 1.4);
+    letter-spacing: 0.02em;
+  }
+
+  &__scroll {
+    margin-bottom: 157px;
+    @include font-style(48px, 700, 1.33);
+    font-family: $fontTitle;
+    writing-mode: vertical-rl;
+    user-select: none;
+    // text-orientation: mixed;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      margin-top: 18px;
+      margin-left: -6px;
+      height: 406px;
+      width: 2px;
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='#fff' stroke-width='4' stroke-dasharray='6%2c 11' stroke-dashoffset='21' stroke-linecap='butt'/%3e%3c/svg%3e");
+    }
+  }
+}
+
+// main title
+.hero-title {
+  position: relative;
+  margin-bottom: 50px;
+  width: 1057px;
+  @include font-style(148px, 700, 1.03);
+  font-family: $fontTitle;
+  z-index: 1;
+
+  &__wrapper {
+    position: relative;
+  }
+}
+
+// title images
+.title-images {
+  position: absolute;
+  top: 124px;
+  right: 0;
+
+  &__list {
+    position: absolute;
+    bottom: -40px;
+    left: -346px;
+    display: flex;
+    gap: 44px;
+  }
+}
+
+// bottom block
+.hero-diet {
+  display: flex;
+  justify-content: space-between;
+
+  &__image {
+    .hero-diet__col-left & {
+      margin-bottom: 54px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 54px;
+    width: 493px;
+    @include font-style(68px, 700, 1.24);
+    font-family: $fontTitle;
+  }
+
+  &__text {
+    @include font-style(24px, 400, 1.4);
+    letter-spacing: 0.02em;
+
+    .hero-diet__col-left & {
+      width: 565px;
+    }
+
+    .hero-diet__col-right & {
+      margin-bottom: 84px;
+      width: 508px;
+    }
+  }
+}
