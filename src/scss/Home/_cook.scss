@@ -1,0 +1,22 @@
+.cook {
+  background-color: #ebf0e4;
+
+  &__container {
+    position: relative;
+    padding-top: 222px;
+    background-image: url('./../images/Home/cook/leaf-top.png');
+    background-repeat: no-repeat;
+    background-position: top 128px left 96px;
+  }
+
+  &__bg-container {
+    display: flex;
+    background-image: url('./../images/Home/cook/leaf-bottom.png');
+    background-repeat: no-repeat;
+    background-position: bottom 34px right;
+  }
+
+  &__image {
+    margin-right: 61px;
+  }
+}
