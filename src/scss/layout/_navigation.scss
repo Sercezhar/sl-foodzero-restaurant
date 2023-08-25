@@ -1,6 +1,6 @@
 .menu {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   align-items: center;
@@ -17,6 +17,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 5;
 
   &--open {
     display: flex;
@@ -79,13 +80,6 @@
 .menu-contact {
   margin-top: auto;
 
-  & address {
-    font-size: 18px;
-    line-height: 1.4;
-    letter-spacing: 0.02em;
-    font-style: normal;
-  }
-
   &__block {
     &:not(:last-child) {
       margin-bottom: 38px;
@@ -100,11 +94,5 @@
     font-family: 'Rufina', serif;
     border-bottom: 4px solid #fff;
     border-style: dotted;
-  }
-
-  &__socials {
-    display: flex;
-    gap: 18px;
-    align-items: center;
   }
 }
