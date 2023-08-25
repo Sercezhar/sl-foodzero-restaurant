@@ -1,7 +1,11 @@
 .header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
   flex-shrink: 0;
-  background-color: green;
-  overflow: hidden;
+  background-color: transparent;
+  z-index: 2;
 
   &__container {
     display: flex;
@@ -57,7 +61,7 @@
     transition: background-color 300ms $transitionBase;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.15);
+      background-color: rgba(255, 255, 255, 0.1);
     }
   }
 }
