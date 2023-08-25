@@ -1,0 +1,29 @@
+.features {
+  &__container {
+    padding: 207px 0 190px 0;
+  }
+
+  &__list {
+    display: flex;
+    gap: 60px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 39px;
+  }
+
+  &__icon-wrapper {
+    padding: 38px;
+    background-color: #ebf0e4;
+    border-radius: 50%;
+  }
+
+  &__icon {
+    width: 184px;
+    height: 184px;
+  }
+}
