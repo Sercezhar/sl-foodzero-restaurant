@@ -1,0 +1,36 @@
+.our-menu {
+  background-image: url('./../images/Home/menu/image.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  &__container {
+    padding: 176px 0 218px 0;
+  }
+
+  &__title {
+    margin-bottom: 158px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-column-gap: 60px;
+    grid-row-gap: 108px;
+  }
+
+  &__price {
+    padding-bottom: 12px;
+    color: #000;
+    @include font-style(48px, 700, 1.33);
+    font-family: $fontTitle;
+    text-align: right;
+    border-bottom: 4px dashed #000;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
