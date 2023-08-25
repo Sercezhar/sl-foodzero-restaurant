@@ -2,5 +2,82 @@
   margin-top: auto;
   padding: 20px 0;
   color: #fff;
-  background-color: #000;
+  background-color: $colorPrimary;
+
+  &__divider {
+    border-top: 2px dashed #fff;
+  }
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+
+  &--primary {
+    padding: 132px 0 137px 0;
+  }
+
+  &--secondary {
+    padding: 58px 0 74px 0;
+  }
+
+  &__logo {
+    margin-top: auto;
+    margin-bottom: auto;
+    @include font-style(68px, 700, 1.24);
+    font-family: $fontTitle;
+  }
+
+  &__title {
+    margin-bottom: 55px;
+    @include font-style(32px, 700, 1.5);
+    font-family: $fontTitle;
+  }
+
+  &__message {
+    @include font-style(14px, 400, 1.2);
+    letter-spacing: 0.02em;
+  }
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  height: 96px;
+
+  &__input {
+    margin-right: 28px;
+    padding: 0 40px;
+    width: 523px;
+    height: 100%;
+    @include font-style(24px, 400, 1.4);
+    letter-spacing: 0.02em;
+    background-color: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    transition: background-color 200ms $transitionBase;
+
+    &:focus {
+      background-color: #fff;
+    }
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  &__button {
+    width: 241px;
+    height: 88px;
+    color: #fff;
+    @include font-style(32px, 700, 1.5);
+    font-family: $fontTitle;
+    background-color: $colorSecondary;
+    transition: scale 300ms $transitionBase;
+
+    &:hover {
+      scale: 1.09;
+    }
+  }
 }

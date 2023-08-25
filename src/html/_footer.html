@@ -1,5 +1,39 @@
 <footer class="footer">
-  <div class="footer__container">
-    <p>Footer Content</p>
+  <div class="footer__container footer-content footer-content--primary">
+    <a class="footer-content__logo" href="./index.html"
+      >Food <br />
+      Zero.</a
+    >
+
+    <div>
+      <h3 class="footer-content__title">Contact</h3>
+
+      @@include('./_address.html')
+    </div>
+
+    <div>
+      <h3 class="footer-content__title">Never Miss a Recipe</h3>
+
+      <form class="footer-form">
+        <input
+          class="footer-form__input"
+          type="text"
+          placeholder="Email Address"
+        />
+        <button class="footer-form__button" type="submit">Subscribe</button>
+      </form>
+
+      <p class="footer-content__message">
+        Join our subscribers and get best recipe delivered each week!
+      </p>
+    </div>
+  </div>
+
+  <div class="footer__divider">
+    <div class="footer__container footer-content footer-content--secondary">
+      <p>© 2023 Zero Inc. All rights Reserved</p>
+
+      @@include('./_socials.html')
+    </div>
   </div>
 </footer>
