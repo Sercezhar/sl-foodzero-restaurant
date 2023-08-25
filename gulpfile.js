@@ -28,7 +28,6 @@ const path = {
     css: `${buildFolder}/css/`,
     js: `${buildFolder}/js/`,
     images: `${buildFolder}/images/`,
-    fonts: `${buildFolder}/fonts/`,
   },
   src: {
     html: `${srcFolder}/*.html`,
@@ -36,14 +35,12 @@ const path = {
     js: `${srcFolder}/js/*.js`,
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/images/**/*.svg`,
-    fonts: `${srcFolder}/fonts/**/*.{eot,woff,woff2,ttf,svg}`,
   },
   watch: {
     html: `${srcFolder}/**/*.html`,
     css: `${srcFolder}/scss/**/*.scss`,
     js: `${srcFolder}/js/**/*.js`,
     images: `${srcFolder}/**/*.{jpg,jpeg,png,svg,gif,webp,ico}`,
-    fonts: `${srcFolder}/fonts/**/*.{eot,woff,woff2,ttf,svg}`,
   },
   clean: buildFolder,
 };
@@ -150,13 +147,6 @@ function images() {
     .pipe(browserSync.stream());
 }
 
-function fonts() {
-  return src(path.src.fonts, { base: `${srcFolder}/fonts/` })
-    .pipe(changed(path.build.fonts))
-    .pipe(dest(path.build.fonts))
-    .pipe(browserSync.stream());
-}
-
 function clean() {
   return del(path.clean);
 }
@@ -166,17 +156,9 @@ function watcher() {
   gulp.watch([path.watch.css], scss);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.images], images);
-  // gulp.watch([path.watch.fonts], fonts);
 }
 
-const tasks = gulp.parallel(
-  favicon,
-  html,
-  scss,
-  js,
-  images
-  // fonts
-);
+const tasks = gulp.parallel(favicon, html, scss, js, images);
 
 const build = gulp.series(clean, tasks);
 const watch = gulp.parallel(build, watcher, server);
@@ -187,7 +169,6 @@ exports.html = html;
 exports.scss = scss;
 exports.js = js;
 exports.images = images;
-// exports.fonts = fonts;
 exports.clean = clean;
 exports.build = build;
 exports.watch = watch;
