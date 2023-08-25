@@ -10,11 +10,12 @@
 @import './base/reset';
 
 // components
-@import './layout/address';
-@import './layout/socials';
+@import './components/address';
+@import './components/socials';
 
-// layout
+// layout/pages
 @import './layout/header';
 @import './layout/navigation';
-@import './layout/hero';
+@import './Home/hero';
+@import './Home/our-menu';
 @import './layout/footer';
