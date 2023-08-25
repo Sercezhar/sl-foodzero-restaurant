@@ -1,0 +1,9 @@
+.address {
+  @include font-style(18px, 400, 1.39);
+  letter-spacing: 0.02em;
+  font-style: normal;
+
+  & li:nth-child(2) {
+    margin-bottom: 38px;
+  }
+}
