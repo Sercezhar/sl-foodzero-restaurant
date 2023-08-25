@@ -9,6 +9,10 @@
 @import './base/common';
 @import './base/reset';
 
+// components
+@import './layout/address';
+@import './layout/socials';
+
 // layout
 @import './layout/header';
 @import './layout/navigation';
