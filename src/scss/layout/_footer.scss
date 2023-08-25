@@ -74,7 +74,7 @@
     @include font-style(32px, 700, 1.5);
     font-family: $fontTitle;
     background-color: $colorSecondary;
-    transition: scale 300ms $transitionBase;
+    transition: scale 250ms $transitionBase;
 
     &:hover {
       scale: 1.09;

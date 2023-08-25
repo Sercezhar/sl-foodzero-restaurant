@@ -13,6 +13,27 @@
   clip: rect(0 0 0 0);
 }
 
+.hover-underline {
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+}
+
+.section-h2,
+.section-h3 {
+  color: #000;
+  font-family: $fontTitle;
+}
+
+.section-h2 {
+  @include font-style(108px, 700, 1.11);
+}
+
+.section-h3 {
+  @include font-style(68px, 700, 1.24);
+}
+
 @if ($responsiveType==1) {
   // responsive
   [class*='__container'] {
