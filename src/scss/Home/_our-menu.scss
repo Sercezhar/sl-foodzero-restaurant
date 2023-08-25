@@ -21,9 +21,6 @@
 
   &__price {
     padding-bottom: 12px;
-    color: #000;
-    @include font-style(48px, 700, 1.33);
-    font-family: $fontTitle;
     text-align: right;
     border-bottom: 4px dashed #000;
   }
