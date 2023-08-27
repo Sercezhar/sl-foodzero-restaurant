@@ -51,6 +51,7 @@
     padding: 0 40px;
     width: 523px;
     height: 100%;
+    color: #fff;
     @include font-style(24px, 400, 1.4);
     letter-spacing: 0.02em;
     background-color: transparent;
@@ -59,6 +60,7 @@
     transition: background-color 200ms $transitionBase;
 
     &:focus {
+      color: #000;
       background-color: #fff;
     }
 
