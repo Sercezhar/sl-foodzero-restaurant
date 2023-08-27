@@ -1,0 +1,61 @@
+.datepicker {
+  & .datepicker-cell {
+    // selected cell
+    &.selected {
+      background: $colorSecondary;
+    }
+
+    // common cell on hover
+    &:not(.disabled, .selected):hover {
+      background-color: $colorLightGray;
+    }
+  }
+
+  // weeks row
+  & .days-of-week {
+    margin-bottom: 10px;
+  }
+}
+
+// calendar size
+.datepicker-view {
+  width: 320px;
+  height: 280px;
+}
+
+// calendar padding
+.datepicker-main {
+  padding: 10px;
+}
+
+// set font
+.datepicker-controls .button,
+.button .view-switch,
+.datepicker .dow,
+.datepicker-view {
+  font-size: 20px;
+}
+
+// buttons
+.prev-button,
+.next-button {
+  &:disabled {
+    pointer-events: none;
+
+    & svg {
+      fill: #dcdcdc;
+    }
+  }
+}
+
+.prev-button {
+  & svg {
+    rotate: 90deg;
+  }
+}
+
+.next-button {
+  & svg {
+    rotate: -90deg;
+  }
+}
