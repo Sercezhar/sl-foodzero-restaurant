@@ -1,0 +1,43 @@
+.calories {
+  &__container {
+    padding: 128px 0 137px 0;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 auto 0 auto;
+    margin-bottom: 18px;
+    width: 1101px;
+  }
+
+  &__text {
+    margin-bottom: 126px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item-title {
+    position: absolute;
+    top: 48px;
+    left: 40px;
+    color: $colorPrimary;
+  }
+
+  &__item-link {
+    position: absolute;
+    top: 50px;
+    right: 49px;
+    transition: right 250ms $transitionBase;
+
+    &:hover {
+      right: 39px;
+    }
+  }
+}
