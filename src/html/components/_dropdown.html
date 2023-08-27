@@ -1,0 +1,25 @@
+<div class="dropdown">
+  <input
+    class="reservation-form__input dropdown__input"
+    type="text"
+    name="people"
+    value="1 Person"
+    readonly
+  />
+
+  <svg class="dropdown__icon" width="25" height="12">
+    <use href="./images/icons.svg#icon-chevron-down"></use>
+  </svg>
+
+  <ul class="dropdown-options visually-hidden">
+    <li
+      class="dropdown-options__item dropdown-options__item--active"
+      data-option="1 Person"
+    >
+      1 Person
+    </li>
+    <li class="dropdown-options__item" data-option="2 People">2 People</li>
+    <li class="dropdown-options__item" data-option="3 People">3 People</li>
+    <li class="dropdown-options__item" data-option="4 People">4 People</li>
+  </ul>
+</div>
