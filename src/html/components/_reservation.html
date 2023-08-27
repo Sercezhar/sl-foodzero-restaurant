@@ -1,0 +1,20 @@
+<section class="reservation">
+  <div class="reservation__container">
+    <h2 class="section-h2 reservation__title">Make a Reservation</h2>
+    <p class="reservation__text">Get in touch with restaurant</p>
+
+    <form class="reservation-form">
+      <div class="reservation-form__inputs">
+        <input
+          class="reservation-form__input"
+          type="text"
+          name="date"
+          readonly
+        />
+        @@include('./_timepicker.html') @@include('./_dropdown.html')
+      </div>
+
+      <button class="reservation-form__button" type="submit">Book Now</button>
+    </form>
+  </div>
+</section>
