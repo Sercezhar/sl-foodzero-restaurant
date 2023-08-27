@@ -1,0 +1,75 @@
+<div class="timepicker__wrapper">
+  <input
+    class="reservation-form__input"
+    type="text"
+    name="time"
+    value="00:00 PM"
+    readonly
+  />
+
+  <svg class="timepicker__icon" width="25" height="12">
+    <use href="./images/icons.svg#icon-chevron-down"></use>
+  </svg>
+
+  <div class="timepicker">
+    <div class="timepicker__input-wrapper">
+      <input
+        class="timepicker__input timepicker__input--hours"
+        type="text"
+        value="00"
+        aria-label="hours"
+        readonly
+      />
+      <div class="timepicker__buttons-wrapper">
+        <button class="timepicker__add" type="button" aria-label="hours-setter">
+          <svg width="25" height="12">
+            <use href="./images/icons.svg#icon-chevron-down"></use>
+          </svg>
+        </button>
+        <button
+          class="timepicker__subtract"
+          type="button"
+          aria-label="hours-setter"
+        >
+          <svg width="25" height="12">
+            <use href="./images/icons.svg#icon-chevron-down"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <span class="timepicker__separator">:</span>
+
+    <div class="timepicker__input-wrapper">
+      <input
+        class="timepicker__input timepicker__input--minutes"
+        type="text"
+        value="00"
+        aria-label="minutes"
+        readonly
+      />
+      <div class="timepicker__buttons-wrapper">
+        <button
+          class="timepicker__add"
+          type="button"
+          aria-label="minutes-setter"
+        >
+          <svg width="25" height="12">
+            <use href="./images/icons.svg#icon-chevron-down"></use>
+          </svg>
+        </button>
+        <button
+          class="timepicker__subtract"
+          type="button"
+          aria-label="minutes-setter"
+        >
+          <svg width="25" height="12">
+            <use href="./images/icons.svg#icon-chevron-down"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <button class="timepicker__meridiem" type="button">PM</button>
+  </div>
+</div>

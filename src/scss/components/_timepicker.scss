@@ -1,0 +1,92 @@
+.timepicker {
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 0;
+  display: none;
+  width: fit-content;
+  height: 90px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  overflow: hidden;
+
+  &--open {
+    display: flex;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__input-wrapper {
+    display: flex;
+  }
+
+  &__input {
+    padding: 0 20px;
+    width: 100px;
+    text-align: center;
+    outline: none;
+    cursor: auto;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    transition: 300ms transform $transitionBase;
+    pointer-events: none;
+
+    &--rotate {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__add,
+  &__subtract {
+    padding: 5px 10px;
+    height: 100%;
+    background-color: #eee;
+    border-left: 1px solid #ccc;
+    transition: background-color 250ms $transitionBase;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+
+  &__add {
+    border-bottom: 1px solid #ccc;
+
+    & svg {
+      rotate: 180deg;
+    }
+  }
+
+  &__separator {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 100%;
+    color: #fff;
+    background-color: $colorSecondary;
+  }
+
+  &__meridiem {
+    width: 80px;
+    color: #fff;
+    background-color: $colorPrimary;
+    border-left: 1px solid #ccc;
+    transition: opacity 250ms $transitionBase;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
