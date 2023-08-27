@@ -1,0 +1,28 @@
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination {
+  position: static;
+}
+
+.swiper-pagination {
+  width: fit-content;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  margin-top: 0;
+  width: 48px;
+  height: 28px;
+}
+
+.swiper-button-prev {
+  & svg {
+    rotate: 180deg;
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: '';
+  display: none;
+}
