@@ -16,7 +16,6 @@
     font-family: $fontTitle;
     writing-mode: vertical-rl;
     user-select: none;
-    // text-orientation: mixed;
 
     &::after {
       content: '';
@@ -73,8 +72,7 @@
   &__title {
     margin-bottom: 54px;
     width: 493px;
-    @include font-style(68px, 700, 1.24);
-    font-family: $fontTitle;
+    color: #fff;
   }
 
   &__text {
