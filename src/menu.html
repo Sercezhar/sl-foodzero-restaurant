@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/Layout/_head.html', { "title": "Home" })
+  <body>
+    @@include('./html/Layout/_header.html')
+    @@include('./html/Layout/_navigation.html', {"page": "menu"})
+    <main>
+      @@include('./html/Menu/_menu-hero.html')
+      @@include('./html/Menu/_menu-starters.html')
+      @@include('./html/Menu/_menu-mains.html')
+      @@include('./html/Menu/_menu-drinks.html')
+      @@include('./html/components/_reservation.html')
+    </main>
+    @@include('./html/Layout/_footer.html')
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker-full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/locales/en-GB.js"></script>
+  <script src="./js/menu.min.js"></script>
+</html>

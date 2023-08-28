@@ -1,0 +1,44 @@
+.menu-starters {
+  &__container {
+    position: relative;
+    padding: 122px 0 140px 0;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -119px;
+      width: 516px;
+      height: 439px;
+      background-image: url('./../images/Menu/starters/blueberry.png');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title,
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__text {
+    margin-bottom: 81px;
+  }
+
+  &__list-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+    width: 710px;
+  }
+}
