@@ -8,19 +8,29 @@
   <div class="menu__content">
     <nav>
       <ul class="menu-nav">
-        <li class="menu-nav__item menu-nav__item--current">
+        <li
+          class="menu-nav__item @@if (context.page === 'home') {menu-nav__item--current}"
+        >
           <a href="./index.html" class="menu-nav__link">Home</a>
         </li>
-        <li class="menu-nav__item">
-          <a href="#" class="menu-nav__link">Menu</a>
+        <li
+          class="menu-nav__item @@if (context.page === 'menu') {menu-nav__item--current}"
+        >
+          <a href="./menu.html" class="menu-nav__link">Menu</a>
         </li>
-        <li class="menu-nav__item">
+        <li
+          class="menu-nav__item @@if (context.page === 'blogs') {menu-nav__item--current}"
+        >
           <a href="#" class="menu-nav__link">Blogs</a>
         </li>
-        <li class="menu-nav__item">
+        <li
+          class="menu-nav__item @@if (context.page === 'about') {menu-nav__item--current}"
+        >
           <a href="#" class="menu-nav__link">About</a>
         </li>
-        <li class="menu-nav__item">
+        <li
+          class="menu-nav__item @@if (context.page === 'contact') {menu-nav__item--current}"
+        >
           <a href="#" class="menu-nav__link">Contact</a>
         </li>
       </ul>
