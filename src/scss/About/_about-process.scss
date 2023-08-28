@@ -1,0 +1,96 @@
+.about-process {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: 0;
+    display: block;
+    width: 468px;
+    height: 545px;
+    background-image: url('./../images/About/process/rosemary-1.png');
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    display: block;
+    width: 320px;
+    height: 327px;
+    background-image: url('./../images/About/process/rosemary-2.png');
+    background-repeat: no-repeat;
+  }
+
+  &__container {
+    padding: 267px 0 320px 0;
+  }
+
+  &__title {
+    margin-bottom: 174px;
+    text-align: center;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.process-step {
+  &--first {
+    display: flex;
+    align-items: center;
+    margin-bottom: 118px;
+
+    & .process-step__text {
+      width: 616px;
+    }
+
+    & .process-step__description {
+      margin-left: 102px;
+    }
+  }
+
+  &--second {
+    & img {
+      margin-bottom: 46px;
+    }
+
+    & .process-step__title {
+      margin-bottom: 28px;
+    }
+
+    & .process-step__text {
+      width: 431px;
+    }
+
+    & .process-step__description {
+      margin-left: 82px;
+    }
+  }
+
+  &--third {
+    padding: 0 71px;
+
+    & .process-step__title {
+      margin-top: 154px;
+    }
+
+    & .process-step__text {
+      margin-bottom: 46px;
+      width: 625px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 28px;
+  }
+
+  &__text {
+    letter-spacing: 0.02em;
+  }
+}

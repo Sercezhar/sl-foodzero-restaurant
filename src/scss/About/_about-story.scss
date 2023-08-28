@@ -1,0 +1,64 @@
+.about-story {
+  &__container {
+    padding: 218px 0 299px 0;
+    background-image: url('./../images/About/story/tomato.png');
+    background-repeat: no-repeat;
+    background-position: top 110px left 41.2%;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 117px;
+  }
+
+  &__title-wrapper {
+    margin: auto 0 94px 77px;
+    width: 668px;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+  }
+}
+
+.about-employees {
+  display: flex;
+  justify-content: space-between;
+  padding: 162px 33px 0 33px;
+
+  &__employee {
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      & .about-employees__description {
+        margin-top: auto;
+        margin-left: auto;
+        text-align: right;
+      }
+    }
+
+    &:last-child {
+      margin-top: 160px;
+
+      & .about-employees__description {
+        margin-bottom: 329px;
+      }
+    }
+  }
+
+  &__card {
+    color: #000;
+    text-align: center;
+  }
+
+  &__position,
+  &__name {
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    width: 510px;
+  }
+}
