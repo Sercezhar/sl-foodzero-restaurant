@@ -34,8 +34,6 @@
   position: relative;
   margin-bottom: 50px;
   width: 1057px;
-  @include font-style(148px, 700, 1.03);
-  font-family: $fontTitle;
   z-index: 1;
 
   &__wrapper {

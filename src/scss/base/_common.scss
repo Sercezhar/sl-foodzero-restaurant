@@ -20,11 +20,17 @@
   }
 }
 
+.section-h1,
 .section-h2,
 .section-h3,
 .section-h4 {
   color: #000;
   font-family: $fontTitle;
+}
+
+.section-h1 {
+  color: #fff;
+  @include font-style(148px, 700, 1.03);
 }
 
 .section-h2 {
