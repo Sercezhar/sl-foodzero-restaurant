@@ -1,10 +1,11 @@
 const config = {
-  mode: "production",
+  mode: 'production',
   entry: {
-    app: "./src/js/app.js",
+    app: './src/js/app.js',
+    menu: './src/js/menu.js',
   },
   output: {
-    filename: "[name].min.js",
+    filename: '[name].min.js',
   },
 };
 
