@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/Layout/_head.html', { "title": "Blogs" })
+  <body>
+    @@include('./html/Layout/_header.html')
+    @@include('./html/Layout/_navigation.html', {"page": "blogs"})
+    <main>
+      @@include('./html/Blogs/_blogs-hero.html')
+      @@include('./html/Blogs/_blogs-posts.html')
+    </main>
+    @@include('./html/Layout/_footer.html')
+  </body>
+  <script src="./js/blogs.min.js"></script>
+</html>

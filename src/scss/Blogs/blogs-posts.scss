@@ -1,0 +1,26 @@
+.blogs-posts {
+  &__container {
+    padding: 129px 0 128px 0;
+  }
+
+  &__pagination {
+    display: flex;
+    gap: 40px;
+    margin: 62px auto 0 auto;
+    width: fit-content;
+  }
+
+  &__pagination-button {
+    padding: 10px 20px;
+    color: #000;
+    border: 2px solid #000;
+    background-color: transparent;
+    transition: 250ms $transitionBase;
+    transition-property: background-color, color;
+
+    &:hover {
+      color: #fff;
+      background-color: $colorSecondary;
+    }
+  }
+}
