@@ -1,0 +1,50 @@
+<section class="contact-reservation">
+  <div class="contact-reservation__container">
+    <div class="contact-reservation__title-wrapper">
+      <h2 class="contact-reservation__title section-h2">Make a Reservation</h2>
+      <p>Get in touch with restaurant</p>
+    </div>
+
+    <form class="contact-form">
+      <div class="contact-form__block">
+        <input
+          class="contact-form__input reservation-form__input"
+          type="text"
+          placeholder="First Name"
+        />
+        <input
+          class="contact-form__input reservation-form__input"
+          type="text"
+          placeholder="Last Name"
+        />
+      </div>
+      <div>
+        <input
+          class="contact-form__input reservation-form__input"
+          type="email"
+          placeholder="Email"
+        />
+      </div>
+      <div>
+        <input
+          class="contact-form__input reservation-form__input"
+          type="text"
+          placeholder="Phone"
+        />
+      </div>
+      <div class="contact-form__block">
+        <input
+          class="reservation-form__input"
+          type="text"
+          name="date"
+          readonly
+        />
+
+        @@include('./../components/_timepicker.html')
+      </div>
+      <div>@@include('./../components/_dropdown.html')</div>
+
+      <button class="contact-form__button" type="submit">Book Now</button>
+    </form>
+  </div>
+</section>

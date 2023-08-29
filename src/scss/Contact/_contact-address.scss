@@ -1,0 +1,57 @@
+.contact-address {
+  &__container {
+    padding: 272px 0 186px 0;
+    color: $colorPrimary;
+    @include font-style(32px, 700, 1.5);
+    font-family: $fontTitle;
+    background-image: url('./../images/Contact/address/orange.png');
+    background-repeat: no-repeat;
+    background-position: top 152px right 47.5%;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+
+    &:first-of-type {
+      margin-bottom: 145px;
+    }
+
+    &:last-of-type {
+      align-items: center;
+    }
+  }
+
+  &__data {
+    margin: auto 143px 79px 0;
+    width: 507px;
+  }
+
+  &__link {
+    color: #9caa00;
+  }
+
+  &__address {
+    margin-left: 44px;
+    width: 748px;
+
+    & p {
+      margin-bottom: 53px;
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 293px;
+    height: 88px;
+    color: #000;
+    border: 2px solid #000;
+    transition: background-color 250ms $transitionBase;
+
+    &:hover {
+      background-color: $colorLightGray;
+    }
+  }
+}

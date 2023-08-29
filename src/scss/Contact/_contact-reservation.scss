@@ -1,0 +1,64 @@
+.contact-reservation {
+  background-color: $colorLightGray;
+
+  &__container {
+    padding: 214px 0 174px 0;
+    background-image: url('./../images/Contact/reservation/mint.png');
+    background-repeat: no-repeat;
+    background-position: top 50px left 21px;
+  }
+
+  &__title-wrapper {
+    margin: 0 auto;
+    margin-bottom: 116px;
+    width: fit-content;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+
+  & input:not(.timepicker__input) {
+    width: 100%;
+  }
+
+  &__block {
+    display: flex;
+    gap: 46px;
+
+    & .timepicker__wrapper {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    cursor: auto;
+
+    &::placeholder {
+      color: #000;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+    margin-top: 36px;
+    width: 327px;
+    height: 88px;
+    color: #fff;
+    @include font-style(32px, 700, 1.5);
+    font-family: $fontTitle;
+    background-color: $colorSecondary;
+    border: 2px solid #000;
+    transition: opacity 250ms $transitionBase;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.contact-hero {
+  max-width: 100%;
+  height: 1080px;
+  background-image: url('./../images/Contact/hero/image.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    color: #fff;
+    @include font-style(32px, 700, 1.5);
+    font-family: $fontTitle;
+  }
+}
+
+.contact-schedule {
+  margin-top: auto;
+  margin-bottom: 130px;
+  width: 696px;
+  color: #fff;
+
+  &__days {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+    padding-bottom: 38px;
+    border-bottom: 2px dashed #fff;
+  }
+
+  &__title {
+    @include font-style(32px, 700, 1.5);
+    font-family: $fontTitle;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+}
