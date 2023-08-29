@@ -1,8 +1,8 @@
 {
-  "name": "project-name",
+  "name": "sl-foodzero-restaurant",
   "version": "1.0.0",
   "main": "gulpfile.js",
-  "homepage": "https://sercezhar.github.io/project-name/",
+  "homepage": "https://sercezhar.github.io/sl-foodzero-restaurant/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp",
