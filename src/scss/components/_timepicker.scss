@@ -9,6 +9,7 @@
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   overflow: hidden;
+  z-index: 1;
 
   &--open {
     display: flex;
@@ -83,10 +84,10 @@
     color: #fff;
     background-color: $colorPrimary;
     border-left: 1px solid #ccc;
-    transition: opacity 250ms $transitionBase;
+    transition: background-color 250ms $transitionBase;
 
     &:hover {
-      opacity: 0.85;
+      background-color: $colorSecondary;
     }
   }
 }
