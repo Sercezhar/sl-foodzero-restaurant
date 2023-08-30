@@ -1,1 +1,3 @@
-# sl-foodzero-restaurant
+# Foodzero
+
+## 5-page restaurant website.
